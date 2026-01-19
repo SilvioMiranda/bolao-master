@@ -43,6 +43,7 @@ export const uploadReceipt = (groupId: number, participantId: number, file: File
     });
 };
 export const generateQRCode = (groupId: number) => api.post(`/payments/${groupId}/qrcode`);
+export const getGroupQRCode = generateQRCode; // Alias for compatibility
 
 // Games
 export const createBet = (groupId: number, numbers: number[]) =>
